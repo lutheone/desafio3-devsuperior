@@ -33,7 +33,7 @@ public class ClientService {
         return page.map(ClientDTO::new);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional
     public ClientDTO insert(ClientDTO clientDTO) {
         Client client = new Client();
         copyDtoToEntity(clientDTO, client);
